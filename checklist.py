@@ -88,8 +88,8 @@ def select(function_code):
         # print("P was clicked")
         list_all_items()
         return True
-    elif function_code == "complete":
-        item_index = int(user_input("which items are complete? "))
+    elif function_code == "CH":
+        item_index = int(user_input("which items need to be checked on the list? "))
         mark_completed(item_index)
         return True
     elif function_code == "Q":
@@ -130,9 +130,9 @@ def loop():
     running = True
     while running:
       selection = user_input(
-        "Press C to add to list, R to Read from list, P to display list, complete to display checked items and Q to quit ")
+        "Press C to add to list, R to Read from list, P to display list, CH to display checked items and Q to quit ")
       running = select(selection)
       continue
 
 loop()
-print("end")
+
